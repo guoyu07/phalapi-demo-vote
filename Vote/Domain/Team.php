@@ -1,4 +1,9 @@
 <?php
+/**
+ * 团队领域业务类
+ * 
+ * @author dogstar <chanzonghuang@gmail.com> 20150517
+ */
 
 class Domain_Team {
 

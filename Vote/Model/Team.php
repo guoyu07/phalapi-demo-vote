@@ -1,4 +1,11 @@
 <?php
+/**
+ * 团队数据源类
+ * 
+ * - 使用了关联查询进行排行榜的展示
+ * 
+ * @author dogstar <chanzonghuang@gmail.com> 20150517
+ */
 
 class Model_Team extends PhalApi_Model_NotORM {
 

@@ -1,4 +1,10 @@
 <?php
+/**
+ * 活动接口类
+ * 
+ * @author dogstar <chanzonghuang@gmail.com> 20150517
+ */
+
 class Api_Act extends PhalApi_Api {
 
     public function getRules() {
@@ -12,6 +18,14 @@ class Api_Act extends PhalApi_Api {
         );
     }
 
+    /**
+     * 团队参赛接口
+     * 
+     *  - code = 0，参赛成功
+     *  - code = 1，队名已存在
+     *  
+     * @return array('code' => 操作码, 'team_id' => 新建的团队ID)
+     */
     public function joinIn() {
         $rs = array('code' => 0, 'team_id' => 0);
 
@@ -29,6 +43,13 @@ class Api_Act extends PhalApi_Api {
         return $rs;
     }
 
+    /**
+     * 列表接口
+     * 
+     * - code = 0，正常获取
+     * 
+     * @return array('code' => 操作码, 'teams' => 队伍)
+     */
     public function showList() {
         $rs = array('code' => 0, 'teams' => array());
 
@@ -42,6 +63,15 @@ class Api_Act extends PhalApi_Api {
         return $rs;
     }
 
+    /**
+     * 投票接口
+     * 
+     * - code = 0，投票成功
+     * - code = 1，团队未参赛
+     * - code = 2，当天投票次数已达上限
+     * 
+     * @return array('code' => 操作码, 'vote_num' => 成功投票后的最新票数)
+     */
     public function vote() {
         $rs = array('code' => 0, 'vote_num' => 0);
 

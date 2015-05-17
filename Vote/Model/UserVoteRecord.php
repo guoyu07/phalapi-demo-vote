@@ -1,4 +1,12 @@
 <?php
+/**
+ * 用户投票纪录数据源类
+ * 
+ * - 使用缓存纪录当天的投票情况
+ * - 不落地
+ * 
+ * @author dogstar <chanzonghuang@gmail.com> 20150517
+ */
 
 class Model_UserVoteRecord {
 

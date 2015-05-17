@@ -1,4 +1,11 @@
 <?php
+/**
+ * 票数数据源类
+ * 
+ * - 读者可以尝试根据$teamId进行分表
+ * 
+ * @author dogstar <chanzonghuang@gmail.com> 20150517
+ */
 
 class Model_Vote extends PhalApi_Model_NotORM {
 
